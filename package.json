@@ -1,0 +1,29 @@
+{
+  "name": "playwright-suite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --project=chromium",
+    "test:api": "playwright test --project=api",
+    "headed": "playwright test --headed --project=chromium",
+    "debug": "playwright test --debug",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit",
+    "auth": "tsx scripts/save-auth.ts",
+    "test:pipeline": "playwright test --project=workato-ui",
+    "test:pipeline:headed": "playwright test --project=workato-ui --headed",
+    "codegen": "playwright codegen --load-storage=.auth/workato.json https://app.workato.com"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^26.6.6",
+    "dotenv": "^18.0.10",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
